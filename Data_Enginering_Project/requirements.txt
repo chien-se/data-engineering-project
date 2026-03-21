@@ -1,0 +1,1 @@
+# Add pinned dependencies as the stack is defined (e.g. dbt-core, apache-airflow, pandas).
