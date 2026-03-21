@@ -59,5 +59,6 @@ airflow-webserver.pid
 # Docker
 *.override.yml
 
-# Claude Code internals
-.claude/
+# Claude Code internals (keep settings.json tracked; ignore local overrides and session data)
+.claude/*
+!.claude/settings.json
