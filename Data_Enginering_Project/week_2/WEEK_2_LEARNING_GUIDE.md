@@ -232,11 +232,11 @@ print(arr[mask])  # [4 5]
 ---
 
 ## ✅ CHECKPOINT 1: NumPy?
-- [ ] Can create arrays (zeros, ones, range, random)
-- [ ] Understand array shape and indexing
-- [ ] Can perform vectorized operations
-- [ ] Understand broadcasting
-- [ ] Can use common functions (sum, mean, std)
+- [✅ ] Can create arrays (zeros, ones, range, random)
+- [✅ ] Understand array shape and indexing
+- [✅ ] Can perform vectorized operations
+- [✅ ] Understand broadcasting
+- [✅ ] Can use common functions (sum, mean, std)
 
 ---
 

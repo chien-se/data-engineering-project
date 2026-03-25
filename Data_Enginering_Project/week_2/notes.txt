@@ -1,0 +1,13 @@
+Numpy :
+    - Numerical Python
+    - Faster than Python list due to storing homogenous data in a contiguous block of memory. Python list store ptrs scattered across memory
+    - Implemented in C and use SIMD so much faster in parallel processing 
+
+**Real Example:**
+```
+Python list:  [1, 2, 3, 4, 5] + [1, 1, 1, 1, 1]
+              Add each element one by one (slow)
+
+NumPy array: array([1, 2, 3, 4, 5]) + array([1, 1, 1, 1, 1])
+             Add all at once (fast!)
+```
