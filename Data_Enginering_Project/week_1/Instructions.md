@@ -1263,6 +1263,8 @@ df.to_csv('movies_cleaned.csv', index=False)
 print("\n✅ Saved: movies_cleaned.csv")
 
 # Export to JSON
+# orient -> each row become one object in a dict
+# indent = 2 make sure it not all in one line 
 movies_json = df.to_json('movies.json', orient='records', indent=2)
 print("✅ Saved: movies.json")
 
