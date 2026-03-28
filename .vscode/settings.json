@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/Data_Enginering_Project/venv/Scripts/python.exe",
+  "python-envs.pythonProjects": []
+}
