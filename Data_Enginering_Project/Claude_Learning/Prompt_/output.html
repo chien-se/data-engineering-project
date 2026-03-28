@@ -117,11 +117,11 @@
                 </div>
                 <div class="stat-box">
                     <div>Average Score</div>
-                    <div class="stat-value">3.0 / 10</div>
+                    <div class="stat-value">7.0 / 10</div>
                 </div>
                 <div class="stat-box">
                     <div>Pass Rate (≥7)</div>
-                    <div class="stat-value">0.0%</div>
+                    <div class="stat-value">66.7%</div>
                 </div>
             </div>
         </div>
@@ -140,147 +140,78 @@
             <tbody>
     
             <tr>
-                <td>Testing with a high-endurance athlete (marathon runner) requiring 4000+ calories with emphasis on carbohydrate loading and sustained energy throughout the day</td>
-                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 75 kg<br><strong>goal:</strong> Marathon preparation with carbohydrate loading for sustained energy during 4000+ calorie endurance day<br><strong>restrictions:</strong> None</td>
-                <td class="criteria">• Meal plan totals 4000+ calories with carbohydrates comprising 60-65% of total energy intake<br>• Includes 4-5 meals/snacks distributed throughout the day to maintain sustained energy<br>• Features easily digestible, carbohydrate-rich foods appropriate for endurance training</td>
-                <td class="output"><pre># Marathon Preparation Nutrition Plan
-
-## Daily Calorie Target
-For a 4000+ calorie endurance day, aim for **3000-3500 calories** on regular training days, scaling up to 4000+ only on long run days.
-
-## Macronutrient Breakdown
-
-| Nutrient | Regular Days | Long Run Days |
-|----------|-------------|---------------|
-| **Carbs** | 55-60% (410-525g) | 65-70% (650-700g) |
-| **Protein** | 15-20% (112-175g) | 12-15% (120-150g) |
-| **Fat** | 20-25% (67-97g) | 20-25% (89-111g) |
-
-## Sample Carb-Loading Day (4000 cal)
-
-**Breakfast:** Oatmeal (100g) + banana + honey + whole milk
-**Mid-morning:** Bagel with jam + sports drink
-**Lunch:** Pasta (200g cooked) + lean chicken + tomato sauce
-**Snack:** Rice cakes + peanut butter + berries
-**Pre-run:** Banana + energy gel
-**Dinner:** White rice (250g) + fish + vegetables
-**Evening:** Toast + jam
-
-## Key Principles
-
-✓ **Timing:** Carbs 3-4 hours before long runs; easily digestible during
-✓ **Hydration:** 3-4 liters daily (more on run days)
-✓ **Fiber:** Keep moderate to avoid GI issues during running
-✓ **Electrolytes:** Salt intake before/during long efforts
-
-Would you like specific meal plans for training vs. race week?</pre></td>
-                <td class="score-col"><span class="score score-low">3</span></td>
-                <td class="reasoning">The solution violates multiple mandatory requirements. While it provides general macronutrient guidance and principles, it fails to deliver the core requirement: a specific 1-day meal plan with exact foods, portions, and timing that totals 4000+ calories with 60-65% carbohydrates. The sample provided is incomplete, lacks caloric calculations, and appears insufficient for the stated goal. The solution reads more as a framework/template rather than an actual executable meal plan. A user cannot follow this plan without making significant assumptions about portion sizes and meal composition.</td>
+                <td>Testing with interdisciplinary social science passage containing mixed topics (sociology, economics, policy) to verify accurate extraction of multiple distinct conceptual areas</td>
+                <td class="prompt-inputs"><strong>content:</strong> The rise of the gig economy has fundamentally reshaped labor market dynamics across developed nations, creating both opportunities and challenges for workers and policymakers. From an economic perspective, platform-based work has reduced transaction costs and increased labor market flexibility, enabling firms to adjust workforce capacity rapidly in response to demand fluctuations. Sociologically, however, this shift has fragmented traditional employment relationships, eroding worker protections and social safety nets that were historically tied to full-time employment status. Policy scholars have increasingly focused on regulatory frameworks, examining how governments might balance innovation incentives with worker welfare protections, including questions of minimum wage standards, benefits eligibility, and collective bargaining rights in digital labor markets. The distributional consequences are particularly acute for low-income workers who lack alternative employment options and face heightened income volatility.</td>
+                <td class="criteria">• Extracts all major conceptual areas: gig economy/platform work, labor market dynamics, worker protections, economic impacts, social/sociological effects, and policy/regulatory concerns<br>• Returns output as a JSON array of strings<br>• Captures distinct topics without excessive redundancy or overly granular subdivision</td>
+                <td class="output"><pre>```json
+[
+  "Gig economy",
+  "Platform-based work",
+  "Labor market flexibility",
+  "Employment relationships",
+  "Worker protections",
+  "Social safety nets",
+  "Regulatory frameworks",
+  "Minimum wage standards",
+  "Benefits eligibility",
+  "Collective bargaining rights",
+  "Digital labor markets",
+  "Income volatility",
+  "Low-income workers"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing only topics with no extra commentary. It successfully extracts topics across all major conceptual areas specified in the criteria (gig economy/platform work, labor market dynamics, worker protections, economic impacts, sociological effects, and policy concerns). The granularity is appropriate and avoids excessive redundancy. However, there is a notable omission of 'labor market dynamics' as an explicit topic, which is a primary framing concept in the passage and explicitly mentioned in the criteria. The slight redundancy between 'Gig economy' and 'Platform-based work' is a minor issue. Overall, the solution demonstrates strong comprehension and execution with only minor gaps.</td>
             </tr>
         
             <tr>
-                <td>Testing with a strength/power athlete (weightlifter) requiring balanced macronutrients with high protein intake and strategic meal timing around workout windows</td>
-                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 85 kg<br><strong>goal:</strong> Maximize strength and muscle gains while maintaining low body fat<br><strong>restrictions:</strong> None</td>
-                <td class="criteria">• Meal plan contains 4-5 meals distributed throughout the day with at least one meal within 2 hours post-workout<br>• Daily protein intake is approximately 1.7-2.2g per kg of body weight (145-187g total)<br>• Includes balanced macronutrients with carbohydrates timed around workout for energy and recovery<br>• Meal plan is presented in a compact, easy-to-read format suitable for a single day</td>
-                <td class="output"><pre># Nutrition Plan for Strength & Muscle Gains
-
-## Caloric Target
-- **Daily intake: 2,800-3,100 calories** (slight surplus for muscle growth)
-- Adjust based on weekly progress (aim for 0.5-1 lb/week gain)
-
-## Macronutrient Breakdown
-
-| Macro | Target | Purpose |
-|-------|--------|---------|
-| **Protein** | 170-190g (2.0-2.2g/kg) | Muscle synthesis & recovery |
-| **Carbs** | 350-400g | Energy & performance |
-| **Fats** | 90-110g | Hormones & health |
-
-## Sample Daily Eating Pattern
-
-**Breakfast**
-- 3 whole eggs + 2 egg whites
-- Oatmeal with berries
-- Green tea
-
-**Mid-Morning Snack**
-- Greek yogurt + almonds
-
-**Lunch**
-- 200g chicken/lean beef
-- Rice or sweet potato
-- Vegetables
-
-**Pre-Workout**
-- Banana + rice cakes
-
-**Post-Workout**
-- Whey protein shake + dextrose/rice cakes
-
-**Dinner**
-- 200g salmon/steak
-- Pasta or rice
-- Vegetables
-
-**Optional Evening**
-- Casein protein or cottage cheese
-
-## Key Principles
-- ✅ Prioritize whole foods (80%)
-- ✅ Time carbs around workouts
-- ✅ Stay consistent with tracking
-- ✅ Reassess every 2-3 weeks
-- ✅ Maintain adequate sleep & hydration
-
-**Adjust if weight stalls for 2+ weeks or body fat creeps up.**</pre></td>
-                <td class="score-col"><span class="score score-low">3</span></td>
-                <td class="reasoning">The solution violates a mandatory requirement by failing to provide 'exact foods, portions, and timing.' While it includes meal names and general food categories, it lacks the specific quantities (grams/ounces) needed to verify the plan actually delivers the stated caloric and macronutrient targets. For example, 'oatmeal with berries' could range from 200-400 calories depending on portions. Additionally, meal timing is vague—only pre/post-workout are specified, with no clock times for other meals. The solution reads more as a template than a concrete 1-day plan. It meets the spirit of other criteria but fails the mandatory requirement for specificity.</td>
+                <td>Testing with highly technical STEM passage featuring domain-specific jargon and nested concepts to ensure proper isolation of main topics from supporting technical details</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in quantum chromodynamics (QCD) have elucidated the mechanisms of asymptotic freedom in strong nuclear interactions, whereby the coupling constant decreases at higher energy scales due to renormalization group flow. Lattice QCD simulations utilizing Monte Carlo methods with Wilson fermions have achieved unprecedented precision in calculating hadron masses and form factors, with systematic uncertainties reduced below 2% through careful treatment of continuum extrapolation and finite-volume effects. These computational techniques, combined with experimental data from deep inelastic scattering and the study of parton distribution functions (PDFs), have provided crucial validation of the Standard Model's predictions regarding quark-gluon dynamics and color confinement phenomena.</td>
+                <td class="criteria">• Extracts main research topics without including technical implementation details (e.g., 'Monte Carlo methods', 'Wilson fermions', 'continuum extrapolation')<br>• Captures all distinct conceptual areas covered (e.g., asymptotic freedom, lattice QCD, parton distribution functions)<br>• Returns output as a JSON array of strings with proper formatting</td>
+                <td class="output"><pre>```json
+[
+  "Quantum chromodynamics",
+  "Asymptotic freedom",
+  "Strong nuclear interactions",
+  "Renormalization group flow",
+  "Lattice QCD simulations",
+  "Hadron masses and form factors",
+  "Continuum extrapolation",
+  "Finite-volume effects",
+  "Deep inelastic scattering",
+  "Parton distribution functions",
+  "Quark-gluon dynamics",
+  "Color confinement"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it returns a valid JSON array of strings with only topics and no commentary. However, it violates the secondary criterion that explicitly states to exclude 'technical implementation details (e.g., Monte Carlo methods, Wilson fermions, continuum extrapolation)'. The inclusion of 'Continuum extrapolation' and 'Finite-volume effects' directly contradicts the provided example of what should be excluded. While the solution correctly excludes 'Monte Carlo methods' and 'Wilson fermions', the inclusion of continuum extrapolation represents a significant inconsistency in applying the filtering criteria. This is a notable deficiency in meeting the secondary criteria, though the mandatory requirements are technically satisfied.</td>
             </tr>
         
             <tr>
-                <td>Testing with an athlete with dietary restrictions (vegetarian endurance cyclist) requiring nutrient-dense alternatives while meeting specific performance and ethical requirements</td>
-                <td class="prompt-inputs"><strong>height:</strong> 172 cm<br><strong>weight:</strong> 68 kg<br><strong>goal:</strong> High-intensity endurance cycling performance with sustained energy for 3-4 hour rides<br><strong>restrictions:</strong> Vegetarian, no meat or fish products</td>
-                <td class="criteria">• Meal plan covers 3 balanced meals that meet vegetarian requirements with no meat or fish<br>• Includes nutrient-dense protein sources (legumes, dairy, nuts, seeds) appropriate for endurance cycling<br>• Provides adequate carbohydrates and electrolytes to support 3-4 hour cycling performance<br>• Plan is concise and practical, formatted as a single-day schedule</td>
-                <td class="output"><pre># Nutrition Plan for Endurance Cycling
-
-## Daily Calorie & Macro Targets
-- **Calories**: ~2,400-2,800 (depending on training volume)
-- **Carbs**: 55-60% (330-420g) — fuel for long rides
-- **Protein**: 15-20% (90-115g) — muscle repair
-- **Fat**: 20-25% (65-80g) — satiety and hormones
-
-## Key Foods by Category
-
-### Primary Carb Sources (Whole Grains)
-- Oats, brown rice, quinoa, whole wheat pasta
-- Sweet potatoes, legumes (lentils, chickpeas)
-- Sourdough or whole grain bread
-
-### Protein Sources (Vegetarian)
-- Greek yogurt, cottage cheese, milk
-- Eggs, tofu, tempeh
-- Legumes + grains (complete proteins)
-- Plant-based: hemp seeds, spirulina
-
-### Healthy Fats
-- Olive oil, avocado, nuts, seeds
-- Nut butters, flaxseeds, chia seeds
-
-### Electrolytes/Micronutrients
-- Leafy greens (iron, magnesium)
-- Beets, bananas (nitrates, potassium)
-- Fortified plant milks (B12, calcium)
-
-## Pre/During/Post-Ride Strategy
-
-**3-4 Hour Rides Require:**
-- **Before**: Carbs + moderate protein 2-3 hours prior
-- **During**: 30-60g carbs/hour (sports drink, bars, gels)
-- **After**: 1.2-1.5g carbs/kg + 20-30g protein within 2 hours
-
-Would you like specific meal examples or hydration recommendations?</pre></td>
-                <td class="score-col"><span class="score score-low">3</span></td>
-                <td class="reasoning">The solution provides excellent nutritional guidance and meets the secondary criteria regarding vegetarian requirements, protein sources, and carbohydrate/electrolyte support. However, it fundamentally fails the mandatory requirement for 'Meals with exact foods, portions, and timing.' The task explicitly asks for a '1 day meal plan' formatted as a schedule, but the solution delivers only a framework and educational content rather than an actual meal plan. A proper response would include breakfast, lunch, dinner, and snacks with specific quantities and times (e.g., 'Breakfast 7:00 AM: 200g oatmeal with 150g Greek yogurt...'). The solution ends with 'Would you like specific meal examples?' which acknowledges this gap but does not fulfill the requirement.</td>
+                <td>Testing with humanities passage containing implicit themes and abstract concepts (literary theory, historical context) to evaluate extraction of non-obvious topics requiring interpretive understanding</td>
+                <td class="prompt-inputs"><strong>content:</strong> The postmodern deconstruction of narrative authority in twentieth-century literature fundamentally challenged the Enlightenment's faith in stable meaning and linear progress. Derrida's concept of différance, operating through the traces of absence within textual systems, destabilizes the logocentrism that Western metaphysics inherited from Plato. In this context, modernist authors like Joyce and Woolf employed fragmented temporality and stream-of-consciousness techniques not merely as stylistic innovations, but as philosophical interventions that mirrored the epistemological crisis precipitated by Einstein's relativity and Heisenberg's uncertainty principle. The text becomes a palimpsest where historical trauma—particularly the specter of two world wars—inscribes itself beneath conscious articulation, rendering the author's intentionality suspect and the reader's interpretive act fundamentally productive rather than recuperative.</td>
+                <td class="criteria">• Identifies both explicit theoretical concepts (postmodernism, deconstruction, différance, logocentrism) and implicit themes (epistemological crisis, historical trauma, authorial instability)<br>• Recognizes interdisciplinary connections between literary theory, philosophy, and scientific thought as distinct topics<br>• Captures abstract interpretive concepts that require understanding contextual relationships rather than surface-level keywords</td>
+                <td class="output"><pre>```json
+[
+  "Postmodern deconstruction",
+  "Narrative authority",
+  "Twentieth-century literature",
+  "Derrida's différance",
+  "Logocentrism",
+  "Western metaphysics",
+  "Modernist literature",
+  "Fragmented temporality",
+  "Stream-of-consciousness",
+  "Epistemological crisis",
+  "Textual meaning and interpretation",
+  "Historical trauma in literature",
+  "Author intentionality",
+  "Reader interpretation"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a JSON array of strings containing only topics with no extra commentary. It successfully identifies explicit theoretical concepts and implicit themes, and demonstrates understanding of contextual relationships. However, it has notable gaps in capturing the full scope of interdisciplinary connections (missing scientific concepts as distinct topics) and some important conceptual anchors (author names, palimpsest metaphor). These are secondary criterion deficiencies rather than mandatory violations, placing the solution in the 7-8 range. The omissions are meaningful enough to prevent a perfect score, but the core execution is sound.</td>
             </tr>
         
             </tbody>
