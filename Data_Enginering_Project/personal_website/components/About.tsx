@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { assetPath } from "@/lib/site";
+import profilePhoto from "@/assets/profile.jpg";
 
 export default function About() {
   return (
@@ -10,12 +10,12 @@ export default function About() {
         {/* Profile Section */}
         <div className="relative mb-20">
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-            {/* Profile Image — public/profile_image.png; next/image respects basePath for GitHub Pages */}
+            {/* Bundled import → _next/static/media/...; basePath applied like other chunks (no public/ URL). */}
             <div className="md:col-span-1 flex justify-center">
               <div className="relative">
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-earth-200">
                   <Image
-                    src={assetPath("/profile_image.png")}
+                    src={profilePhoto}
                     alt="Profile"
                     width={224}
                     height={224}
