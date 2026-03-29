@@ -7,41 +7,41 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-spirit-900 text-white py-12">
+    <footer className="bg-earth-900 text-white py-16 border-t border-earth-800">
       <div className="container-max px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
+            <h3 className="text-2xl font-bold mb-4">
               {brandFirst}
-              <span className="accent-text">.dev</span>
+              <span className="text-forest-400">.dev</span>
             </h3>
-            <p className="text-gray-300 text-sm">
-              Crafted with persistence and dedication.
+            <p className="text-earth-400 text-sm font-medium">
+              Crafted with persistence, dedication, and a relentless spirit.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Navigation</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h4 className="font-bold mb-4 text-lg text-white">Navigation</h4>
+            <ul className="space-y-3 text-sm text-earth-400">
               <li>
-                <Link href="#about" className="hover:accent-text transition">
-                  About
+                <Link href="#about" className="hover:text-white transition font-semibold">
+                  About Me
                 </Link>
               </li>
               <li>
-                <Link href="#projects" className="hover:accent-text transition">
+                <Link href="#projects" className="hover:text-white transition font-semibold">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="#resume" className="hover:accent-text transition">
-                  Resume
+                <Link href="#resume" className="hover:text-white transition font-semibold">
+                  Education
                 </Link>
               </li>
               <li>
-                <Link href="#blog" className="hover:accent-text transition">
+                <Link href="#blog" className="hover:text-white transition font-semibold">
                   Blog
                 </Link>
               </li>
@@ -50,15 +50,15 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="font-semibold mb-4">Social</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h4 className="font-bold mb-4 text-lg text-white">Social</h4>
+            <ul className="space-y-3 text-sm text-earth-400">
               <li>
-                <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="hover:accent-text transition">
+                <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="hover:text-white transition font-semibold">
                   GitHub
                 </a>
               </li>
               <li>
-                <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:accent-text transition">
+                <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition font-semibold">
                   LinkedIn
                 </a>
               </li>
@@ -67,23 +67,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h4 className="font-bold mb-4 text-lg text-white">Contact</h4>
+            <ul className="space-y-3 text-sm text-earth-400">
               <li>
-                <a href={socialLinks.email} className="hover:accent-text transition">
-                  Email
+                <a href={socialLinks.email} className="hover:text-white transition font-semibold">
+                  Email Me
                 </a>
               </li>
-              <li className="text-gray-400">
-                Available for opportunities
+              <li className="text-forest-400 font-semibold">
+                Open to opportunities
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-spirit-700 pt-8">
-          <p className="text-center text-gray-300 text-sm">
-            © {currentYear} {personalInfo.name}. Built with Next.js, Tailwind CSS, and a relentless spirit.
+        <div className="border-t border-earth-800 pt-8">
+          <p className="text-center text-earth-500 text-sm font-medium">
+            &copy; {currentYear} {personalInfo.name}. Built with Next.js & Tailwind CSS.
           </p>
         </div>
       </div>

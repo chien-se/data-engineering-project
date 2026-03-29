@@ -1,111 +1,90 @@
+import Image from "next/image";
+import { assetPath } from "@/lib/site";
+
 export default function About() {
   return (
-    <section id="about" className="section bg-white">
+    <section id="about" className="section bg-white py-20">
       <div className="container-max px-4 md:px-8">
-        <h2 className="text-4xl font-bold text-spirit-900 mb-12">My Story</h2>
+        <h2 className="text-4xl font-bold text-earth-900 mb-16 text-center">About Me</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Journey Timeline */}
-          <div>
-            <h3 className="text-2xl font-semibold text-spirit-600 mb-6">
-              The Journey
-            </h3>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-accent-gold mt-1.5"></div>
-                  <div className="w-0.5 h-24 bg-spirit-200"></div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-spirit-900">Started Learning</h4>
-                  <p className="text-gray-600 text-sm">
-                    Began my programming journey with a passion for solving problems
-                    and building meaningful solutions.
-                  </p>
+        {/* Profile Section */}
+        <div className="relative mb-20">
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            {/* Profile Image — public/profile_image.png; next/image respects basePath for GitHub Pages */}
+            <div className="md:col-span-1 flex justify-center">
+              <div className="relative">
+                <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-earth-200">
+                  <Image
+                    src={assetPath("/profile_image.png")}
+                    alt="Profile"
+                    width={224}
+                    height={224}
+                    className="w-full h-full object-cover"
+                    unoptimized
+                    priority
+                  />
                 </div>
               </div>
+            </div>
 
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-accent-gold mt-1.5"></div>
-                  <div className="w-0.5 h-24 bg-spirit-200"></div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-spirit-900">Built First Projects</h4>
-                  <p className="text-gray-600 text-sm">
-                    Created multiple full-stack applications, learning through
-                    hands-on experience and continuous iteration.
-                  </p>
-                </div>
-              </div>
+            {/* Story Section */}
+            <div className="md:col-span-2">
+              <h3 className="text-3xl font-bold text-earth-900 mb-6">My Journey</h3>
+              <p className="text-lg text-earth-700 leading-relaxed mb-6">
+                I'm a passionate data engineer and full-stack developer with a love for building innovative solutions.
+                My journey started with a curiosity about how things work, which evolved into a career dedicated to
+                creating meaningful technology that solves real problems.
+              </p>
+              <p className="text-lg text-earth-700 leading-relaxed mb-8">
+                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects,
+                or enjoying the creative side of development. I believe in continuous learning and pushing boundaries.
+              </p>
+              <p className="text-lg text-earth-700 leading-relaxed mb-8">
+                Incoming Summer Engineering Intern at Snohomish County PUD
+              </p>
 
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-accent-gold mt-1.5"></div>
-                  <div className="w-0.5 h-24 bg-spirit-200"></div>
+              {/* Quick Stats */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="bg-earth-50 rounded-lg p-4 shadow-sm border border-earth-200">
+                  <p className="text-2xl font-bold text-forest-600">4+</p>
+                  <p className="text-sm text-earth-600">Years Experience</p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-spirit-900">Professional Growth</h4>
-                  <p className="text-gray-600 text-sm">
-                    Applied my skills in production environments, collaborated with
-                    teams, and deepened my technical expertise.
-                  </p>
+                <div className="bg-earth-50 rounded-lg p-4 shadow-sm border border-earth-200">
+                  <p className="text-2xl font-bold text-forest-600">20+</p>
+                  <p className="text-sm text-earth-600">Projects Built</p>
                 </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-accent-gold"></div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-spirit-900">Always Learning</h4>
-                  <p className="text-gray-600 text-sm">
-                    Continuing to push boundaries, tackle new challenges, and grow
-                    as an engineer with an unyielding spirit.
-                  </p>
+                <div className="bg-earth-50 rounded-lg p-4 shadow-sm border border-earth-200">
+                  <p className="text-2xl font-bold text-forest-600">100%</p>
+                  <p className="text-sm text-earth-600">Passion</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Philosophy */}
-          <div>
-            <h3 className="text-2xl font-semibold text-spirit-600 mb-6">
-              My Philosophy
-            </h3>
-            <div className="space-y-6">
-              <div className="card border-l-4 border-accent-gold">
-                <h4 className="font-semibold text-spirit-900 mb-2">Persistence</h4>
-                <p className="text-gray-600">
-                  Every bug is a puzzle, every challenge is an opportunity. I
-                  believe in pushing through obstacles with determination and
-                  resourcefulness.
-                </p>
-              </div>
-
-              <div className="card border-l-4 border-accent-gold">
-                <h4 className="font-semibold text-spirit-900 mb-2">Continuous Learning</h4>
-                <p className="text-gray-600">
-                  The tech world evolves constantly. I stay ahead by reading,
-                  building, and experimenting with new technologies and paradigms.
-                </p>
-              </div>
-
-              <div className="card border-l-4 border-accent-gold">
-                <h4 className="font-semibold text-spirit-900 mb-2">Quality Matters</h4>
-                <p className="text-gray-600">
-                  I write clean, maintainable code. I believe in testing,
-                  documentation, and building solutions that last.
-                </p>
-              </div>
-
-              <div className="card border-l-4 border-accent-gold">
-                <h4 className="font-semibold text-spirit-900 mb-2">Impact</h4>
-                <p className="text-gray-600">
-                  I care deeply about creating solutions that solve real problems
-                  and provide value to users and teams.
-                </p>
-              </div>
+        {/* My Hobbies */}
+        <div className="bg-earth-50 rounded-xl shadow-sm border border-earth-200 p-8 md:p-12 max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-earth-900 mb-8 text-center">My Hobbies</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-4xl mb-2">📖</div>
+              <p className="font-semibold text-earth-800">Reading Manga</p>
+              <p className="text-sm text-earth-600">1000+ mangas read</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🎸</div>
+              <p className="font-semibold text-earth-800">Punk Concerts</p>
+              <p className="text-sm text-earth-600">Live music & mosh pits</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">💪</div>
+              <p className="font-semibold text-earth-800">Working Out</p>
+              <p className="text-sm text-earth-600">Weight lifting and MMA </p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🌾</div>
+              <p className="font-semibold text-earth-800">Gaming</p>
+              <p className="text-sm text-earth-600">Stardew Valley and TFT</p>
             </div>
           </div>
         </div>
